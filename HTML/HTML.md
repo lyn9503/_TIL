@@ -15,10 +15,8 @@
      ```
   3. head는 **상세설명**, body는 **사용자에게 보여지는 태그**들로 이루어져 있다.
 * * *
-### HTML 태그
+### HTML 유용한 사이트
    * [태그 정보](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-* * *
-### HTML 코드 검사
    * [코드 검사](https://validator.w3.org/)
 * * *
 ### 웹사이트는 큰 박스 안에 작은 박스들로 구성되어 있다.    
