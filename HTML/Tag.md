@@ -8,21 +8,22 @@
 
 - Tag안에 content가 없는 이상 사용자에게 보여지지 않는 태그
 - ex)
-
+```
   - <header>
   - <footer>
   - <section>
   - <div>
   - <span>
-
+```
 ### Item Tag
 
 - Tag안에 content가 없어도 사용자에게 보여지는 태그
 - ex)
+```
   - <a>
   - <input>
   - <table>
-
+```
 ### Block과 Inline
 
 - Block은 하나의 태그가 공간을 차지하면 그 뒤에오는 태그는 다음 줄로 내려간다.
