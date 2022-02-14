@@ -51,7 +51,7 @@
 ### Input and Type
 
 - 사용자에게 입력받는 태그 lable도 주로 같이 사용한다.
-
+'''
    <label for="input_name">name: </label>
    <input id="input_name" type="text">
-
+'''
