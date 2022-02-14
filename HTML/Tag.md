@@ -28,11 +28,11 @@
 
 - Block은 하나의 태그가 공간을 차지하면 그 뒤에오는 태그는 다음 줄로 내려간다.
 - Inline은 Block과의 반대로 먼저 쓰여진 태그 옆에 작성된다.
-- 
+``` 
     <p>This is a sentence. <b>That</b> is..</p>
     <p>This is a sentence. <span>That</span> is..</p>
     <p>This is a sentence. <div>That</div> is..</p>
-
+```
 ### List
 - ul 태그는 순서가 없는 목록을 만들 때 사용하며 ul 내부에 li 요소를 포함해 각 항목을 표시한다.
 - ol 태그는 순서가 있는 목록을 만들 때 사용하며 ul과 같이 내부에 li를 포함한다.
