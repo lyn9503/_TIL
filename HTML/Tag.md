@@ -9,20 +9,20 @@
 - Tag안에 content가 없는 이상 사용자에게 보여지지 않는 태그
 - ex)
 ```
-  - <header></header>
-  - <footer></footer>
-  - <section></section>
-  - <div></div>
-  - <span></span>
+    <header></header>
+    <footer></footer>
+    <section></section>
+    <div></div>
+    <span></span>
 ```
 ### Item Tag
 
 - Tag안에 content가 없어도 사용자에게 보여지는 태그
 - ex)
 ```
-  - <a></a>
-  - <input></input>
-  - <table></table>
+    <a></a>
+    <input></input>
+    <table></table>
 ```
 ### Block과 Inline
 
