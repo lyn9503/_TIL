@@ -35,23 +35,22 @@
 ### List
 
     <!-- ol>li*3 ol안에 li 태그 3개를 한번에 작성해준다.-->
-        <ol type="i" reversed> <!--type="i" = roman 언어 타입으로 변경, reversed 순서를 거꾸로-->
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ol>
-        <ul>
-            <li>Hello</li>
-            <li></li>
-            <li></li>
-        </ul>
+    <ol type="i" reversed> <!--type="i" = roman 언어 타입으로 변경, reversed 순서를 거꾸로-->
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ol>
+    
+    <ul>
+      <li>Hello</li>
+      <li></li>
+      <li></li>
+    </ul>
 
 ### Input and Type
 
 - 사용자에게 입력받는 태그 lable도 주로 같이 사용한다.
-<pre>
-    <code>
-        <label for="input_name">name: </label>
-        <input id="input_name" type="text">
-    </code>
-</pre>
+
+   <label for="input_name">name: </label>
+   <input id="input_name" type="text">
+
