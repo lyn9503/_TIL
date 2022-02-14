@@ -9,20 +9,20 @@
 - Tag안에 content가 없는 이상 사용자에게 보여지지 않는 태그
 - ex)
 ```
-  - <header>
-  - <footer>
-  - <section>
-  - <div>
-  - <span>
+  - <header></header>
+  - <footer></footer>
+  - <section></section>
+  - <div></div>
+  - <span></span>
 ```
 ### Item Tag
 
 - Tag안에 content가 없어도 사용자에게 보여지는 태그
 - ex)
 ```
-  - <a>
-  - <input>
-  - <table>
+  - <a></a>
+  - <input></input>
+  - <table></table>
 ```
 ### Block과 Inline
 
@@ -34,20 +34,21 @@
     <p>This is a sentence. <div>That</div> is..</p>
 
 ### List
+- ul 태그는 순서가 없는 목록을 만들 때 사용하며 ul 내부에 li 요소를 포함해 각 항목을 표시한다.
+- ol 태그는 순서가 있는 목록을 만들 때 사용하며 ul과 같이 내부에 li를 포함한다.
+- ol에는 type, reserved와 같은 속성을 사용할 수 있다.
 
-    ol>li*3 : ol안에 li 태그 3개를 한번에 작성해준다.
+    <ul>
+      <li>Hello</li>
+      <li></li>
+      <li></li>
+    </ul>
     
     <ol type="i" reversed> <!--type="i" = roman 언어 타입으로 변경, reversed 순서를 거꾸로-->
       <li>1</li>
       <li>2</li>
       <li>3</li>
     </ol>
-    
-    <ul>
-      <li>Hello</li>
-      <li></li>
-      <li></li>
-    </ul>
     
 ### Input and Type
 
