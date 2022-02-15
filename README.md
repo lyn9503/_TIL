@@ -1,4 +1,4 @@
-# Front-end TIL
+#TIL
 
 ### HTML
 * [HTML](https://github.com/lyn9503/TIL/blob/main/HTML/HTML.md)
