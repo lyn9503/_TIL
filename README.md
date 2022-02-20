@@ -1,4 +1,4 @@
-# 매일 공부한 내용을 정리해 올려요!
+# 공부한 내용을 정리해 올려요!
 
 ### HTML
 * [HTML](https://github.com/lyn9503/TIL/blob/main/HTML/HTML.md)
