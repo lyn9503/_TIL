@@ -7,4 +7,4 @@
 * [Selector](https://github.com/lyn9503/TIL/blob/main/CSS/Selector.md)
 * [Layout](https://github.com/lyn9503/TIL/blob/main/CSS/Layout.md)
 * [Responsive Web](https://github.com/lyn9503/TIL/blob/main/CSS/Responsive%20Web.md)
-* [Responsive Web](https://github.com/lyn9503/TIL/blob/main/CSS/em%20vs%20rem.md)
+* [em vs rem](https://github.com/lyn9503/TIL/blob/main/CSS/em%20vs%20rem.md)
