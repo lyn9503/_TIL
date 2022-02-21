@@ -175,8 +175,8 @@ position을 지정해주지 않으면 navbar_icon 다음에 배치되므로 posi
 }
 ```
 768 이하(태블릿 사이즈) 스크린에서 표현되게 해줘야 하므로 @media를 이용해 적용한다.  
-768 사이즈 이상에서는 행으로 보여주지만 768 이하 사이즈에서는 열로 보여져야 하므로  
-navbar, menu를 flex-direction: column; 을 이용해 요소들이 열로 처리될 수 있도록 한다.  
+768 사이즈 이상에서는 열로 보여주지만 768 이하 사이즈에서는 행으로 보여져야 하므로  
+navbar, menu를 flex-direction: column; 을 이용해 요소들이 행으로 처리될 수 있도록 한다.  
 menu가 아래로 정렬되게 align-items: center;를 이용해 정렬해주며  
 꽉 차게 보여야 하므로 width: 100%로 맞춰준다.  
 
