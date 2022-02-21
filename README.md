@@ -8,4 +8,4 @@
 * [Layout](https://github.com/lyn9503/TIL/blob/main/CSS/Layout.md)
 * [Responsive Web](https://github.com/lyn9503/TIL/blob/main/CSS/Responsive%20Web.md)
 * [em vs rem](https://github.com/lyn9503/TIL/blob/main/CSS/em%20vs%20rem.md)
-* [Responsive Header.md](https://github.com/lyn9503/TIL/blob/main/CSS/Responsive%20Header.md)
+* [Responsive Header](https://github.com/lyn9503/TIL/blob/main/CSS/Responsive%20Header.md)
