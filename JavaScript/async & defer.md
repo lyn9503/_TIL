@@ -62,5 +62,8 @@ async는 다운로드 된 js부터 실행하기 때문에 js가 순서에 의존
 하지만 defer는 모두 다운로드 한 후 순서대로 js파일을 실행한다.
 이런 경우로 head안에 defer옵션을 사용하는 것이 효율적이고 안전하다.
 
+## JavaScript가 뭔가요?
+https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript
+
 ## 강의
 https://www.youtube.com/watch?v=tJieVCgGzhs&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=2
