@@ -3,9 +3,7 @@
 ## head에 사용하는 경우
 ```
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    ···
     <script src="main.js"></script>
 </head>
 ```  
@@ -19,7 +17,7 @@
 ## body에 사용하는 경우
 ```
 <body>
-    <div></div>
+    ···
     <script src="main.js"></script>
 </body>
 ```  
@@ -32,9 +30,7 @@
 ## head + async를 사용하는 경우
 ```
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    ···
     <script src async="main.js"></script>
 </head>
 ```  
@@ -50,9 +46,7 @@ html을 parsing 하는 동안 병렬로 다운받게 되므로 정상적인 페�
 ## head + defer를 사용하는 경우
 ```
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    ···
     <script src defer="main.js"></script>
 </head>
 ```  
