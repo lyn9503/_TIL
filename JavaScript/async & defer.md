@@ -66,5 +66,5 @@ async는 다운로드 된 js부터 실행하기 때문에 js가 순서에 의존
 ### JavaScript가 뭔가요?
 https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript
 
-### 강의
+### 참고 강의
 https://www.youtube.com/watch?v=tJieVCgGzhs&list=PLv2d7VI9OotTVOL4QmPfvJWPJvkmv6h-2&index=2
