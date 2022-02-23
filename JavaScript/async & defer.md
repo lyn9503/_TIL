@@ -1,4 +1,4 @@
-# js 파일을 읽어오는 방법
+# js 파일을 읽어오는 여러가지 방법
 
 ## head에 사용하는 경우
 ```
@@ -61,8 +61,8 @@ defer는 html이 parsing되고 난 이후 페이지를 보여준 후 js를 실�
 async는 다운로드 된 js부터 실행하기 때문에 js가 순서에 의존적인 경우 async을 사용하면 문제가 발생할 수 있다.
 하지만 defer는 모두 다운로드 한 후 순서대로 js파일을 실행한다.
 이런 경우로 head안에 defer옵션을 사용하는 것이 효율적이고 안전하다.  
-
-
+  
+  
 ### JavaScript가 뭔가요?
 https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript
 
