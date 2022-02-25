@@ -12,3 +12,4 @@
 * [Youtube UI](https://github.com/lyn9503/TIL/blob/main/CSS/Youtube%20UI.md)
 ### JavaScript
 * [async & defer](https://github.com/lyn9503/TIL/blob/main/JavaScript/async%20&%20defer.md)
+* [Variable](https://github.com/lyn9503/TIL/blob/main/JavaScript/Variable.md)
