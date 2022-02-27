@@ -202,6 +202,131 @@ backgound: var(--background-color);
 ```
 var를 이용해 지정해주면 된다.  
 
+## 코드
+<details>
+<summary>responsive1.html</summary>
+        
+<div markdown="1">
+
+```
+<body>
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="fa-brands fa-artstation"></i>
+            <a href="">Test</a>
+        </div>
+
+        <ul class="navbar_menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Galary</a></li>
+            <li><a href="">Weddings</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Bookings</a></li>
+        </ul>
+        
+        <div class="navbar_icon">
+            <i class="fa-brands fa-twitter-square"></i>
+            <i class="fa-brands fa-facebook-square"></i>
+        </div>
+        <a href="#" class="navbar_toogleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav>
+</body>
+```
+
+</div>
+</details>
+
+<details>
+<summary>responsive1.css</summary>
+        
+<div markdown="1">
+
+```
+:root {
+  --text-color: white;
+  --background-color: rgba(25, 3, 77, 0.884);
+  --accent-color: bisque;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--background-color);
+  padding: 8px 12px;
+}
+
+.navbar_logo {
+  font-size: 1.5em;
+  color: var(--text-color);
+}
+
+.navbar_logo {
+  color: var(--accent-color);
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar_menu li {
+  padding: 8px 12px;
+}
+
+.navbar_icon {
+  display: flex;
+  padding-right: 0;
+}
+
+.navbar_icon i {
+  padding: 8px 12px;
+  font-size: 1.5em;
+}
+
+.navbar_toogleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 1.5em;
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar_menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar_icon {
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar_toogleBtn {
+    display: flex;
+  }
+}
+```
+
+</div>
+</details>
+
 ## 강의  
 https://www.youtube.com/watch?v=X91jsJyZofw
 
