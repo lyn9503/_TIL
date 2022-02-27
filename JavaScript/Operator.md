@@ -1,4 +1,4 @@
-# Operator(연산자)
+# Operator (연산자)
 
 ## 1. String concatenation (문자열 연결)
 ```
