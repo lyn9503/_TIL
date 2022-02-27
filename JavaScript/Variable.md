@@ -52,7 +52,7 @@ var age
 let globalName = 'global name';  
 ```
 
-## 3. constants
+## 3. constant
 ![13](https://user-images.githubusercontent.com/73509513/155650407-e86909a3-277f-4d72-97f9-3a4ec162935b.png)
 constants를 선언하면 가르키고 있는 **포인터가 잠겨**있어 **값이 절대 변하지 않는다.**  
 **보안**, **thread 보호**, **개발자 실수** 같은 이유로 왠만하면 값을 할당한 다음에 **다시는 변경되지 않는 데이터 타입을 사용**해야 한다.  
@@ -65,6 +65,10 @@ const maxNumber = 5;
 **primitive** (더이상 나눠지지 않는 단위들) **single item** - number, string, boolean, null, underiedn, symbol  
 **object** (single item을 한군데 묶어서 관리) - box container  
 **function** : first-class function (변수에 할당이 가능, 함수에 인자로도 전달가능, 리턴이 가능하다.)  
+
+### data type
+Imutable data types - 데이터 타입을 변경하지 못한다.
+Mutable data types - 자바스크립트에서는 기본적으로 모든 오브젝트는 변경이 가능하다.
 
 ### data types for number
 다른언어는 숫자를 입력할 때 데이터타입을 지정하고 사용하지만 자바스크립트에서는 **데이터타입을 선언하지 않아도 변수에 자동으로 할당**된다.  
