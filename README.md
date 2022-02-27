@@ -13,3 +13,4 @@
 ### JavaScript
 * [async & defer](https://github.com/lyn9503/TIL/blob/main/JavaScript/async%20&%20defer.md)
 * [Variable](https://github.com/lyn9503/TIL/blob/main/JavaScript/Variable.md)
+* [Operator](https://github.com/lyn9503/TIL/blob/main/JavaScript/Operator.md)
