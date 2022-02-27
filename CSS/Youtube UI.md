@@ -972,9 +972,8 @@ li {
     display: none;
   }
 }
-
 ```
-    
+
 </div>
 </details>
 
