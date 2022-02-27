@@ -67,8 +67,8 @@ const maxNumber = 5;
 **function** : first-class function (변수에 할당이 가능, 함수에 인자로도 전달가능, 리턴이 가능하다.)  
 
 ### data type
-Imutable data types - 데이터 타입을 변경하지 못한다.
-Mutable data types - 자바스크립트에서는 기본적으로 모든 오브젝트는 변경이 가능하다.
+Imutable data types - 데이터 타입을 변경하지 못한다.  
+Mutable data types - 자바스크립트에서는 기본적으로 모든 오브젝트는 변경이 가능하다.  
 
 ### data types for number
 다른언어는 숫자를 입력할 때 데이터타입을 지정하고 사용하지만 자바스크립트에서는 **데이터타입을 선언하지 않아도 변수에 자동으로 할당**된다.  
