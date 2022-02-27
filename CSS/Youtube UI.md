@@ -710,11 +710,13 @@ li 태그의 기본적인 스타일을 없애주기 위해 list-style을 없애�
   --fontColor: rgb(0, 81, 255);
   --btnColor: rgb(247, 247, 247);
 }
+    
 /** body **/
 body {
   margin: 0;
   font-size: 24px;
 }
+    
 /** nav **/
 .navbar {
   display: flex;
@@ -723,6 +725,7 @@ body {
   padding: 5px 10px;
   background: var(--backgroundColor);
 }
+    
 .navList {
   display: flex;
   font-size: 1em;
