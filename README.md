@@ -15,3 +15,4 @@
 * [Variable](https://github.com/lyn9503/TIL/blob/main/JavaScript/Variable.md)
 * [Operator](https://github.com/lyn9503/TIL/blob/main/JavaScript/Operator.md)
 * [Function](https://github.com/lyn9503/TIL/blob/main/JavaScript/Function.md)
+* [Class](https://github.com/lyn9503/TIL/blob/main/JavaScript/Class.md)
