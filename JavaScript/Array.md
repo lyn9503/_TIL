@@ -49,7 +49,6 @@ for (let fruit of fruits) {
 fruits의 데이터를 순차적으로 할당하면서 { }을 실행해 출력하게 된다.  
 
 ### forEach
-forEach는 callback 함수를 받아오는데 이는 배열의 각 요소에 대해 정의된 콜백 함수를 호출하고 결과가 포함된 배열을 반환한다.  
 ```
 fruit.forEach(function (fruit, index, array) {
     console.log(fruit, index, array);
@@ -58,15 +57,18 @@ fruit.forEach(function (fruit, index, array) {
 ```
 fruits.forEach((fruit) => console.log(fruit));
 ```
+forEach는 callback 함수를 받아오는데 이는 배열의 각 요소에 대해 정의된 콜백 함수를 호출하고 결과가 포함된 배열을 반환한다.  
 forEach의 함수에서는 보통적으로 array는 받아오지 않는다.  
 
 ## 4. Addtion, deletion, copy (삽입, 삭제, 복사)
-### push: 배열의 맨 뒤에 추가
+### push
+배열의 맨 뒤에 추가
 ```
 fruits.push('🍓', '🍑');
 console.log(fruits);
 ```
-### pop: 배열의 맨 뒤부터 지우기
+### pop
+배열의 맨 뒤부터 지우기
 ```
 const poped = fruits.pop();
 fruits.pop();
@@ -74,13 +76,15 @@ console.log(fruits);
 ```
 만약 하나 더 지우려면 fruits.pop();을 한번 더 사용하면 된다.  
 
-### unshift: 배열의 맨 앞에 추가
+### unshift
+배열의 맨 앞에 추가
 ```
 fruits.unshift('🍓', '🍋');
 console.log(fruits);
 ```
 
-### shift: 배열의 맨 앞부터 지우기
+### shift
+배열의 맨 앞부터 지우기
 ```
 fruits.shift();
 fruits.shift();
@@ -91,7 +95,8 @@ shift, unshift은 pop과 push보다 느리다.
 이는 데이터를 한칸씩 앞, 뒤로 옮긴 후 빈공간에 데이터를 집어넣거나 삭제하는 것을 반복하기 떄문이다.  
 그래서 pop과 push를 사용하는 것이 더 좋은 방식이다.  
 
-### splice: 데이터를 지정된 위치에서 지우는 방식
+### splice
+데이터를 지정된 위치에서 지우는 방식
 ```
 splice(start: number, deleteCount?: number ...items: T[]);
 ```
@@ -105,7 +110,8 @@ console.log(fruits);
 fruits.splice(1, 0, '🍏', '🍉');
 console.log(fruits);
 ```
-### concat: 두가지의 배열을 묶어서 만들기
+### concat
+두가지의 배열을 묶어서 만들기
 ```
 const fruits2 = ['🍐', '🥥'];
 const newFruits = fruits.concat(fruits2);
@@ -114,19 +120,22 @@ console.log(newFruits);
 새로 묶여진 배열을 리턴해 기존의 데이터에 새로운 데이터를 뒤에 추가한다.  
 
 ## 5. Searching (검색)
-### indexOf: Index 검색
+### indexOf
+Index 검색
 ```
 console.log(fruits);
 console.log(fruits.indexOf('🍎'));
 console.log(fruits.indexOf('🍉'));
 console.log(fruits.indexOf('🥥'));
 ```
-### includes: 배열에 데이터가 있는지 없는지 즉 true, false로 리턴
+### includes
+배열에 데이터가 있는지 없는지 즉 true, false로 리턴
 ```
 console.log(fruits.includes('🍉'));
 console.log(fruits.includes('🥥'));
 ```
-### lastIndexOf: 마지막 Index 검색
+### lastIndexOf
+마지막 Index 검색
 ```
 fruits.push('🍎');
 console.log(fruits);
