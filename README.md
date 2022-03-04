@@ -17,3 +17,4 @@
 * [Function](https://github.com/lyn9503/TIL/blob/main/JavaScript/Function.md)
 * [Class](https://github.com/lyn9503/TIL/blob/main/JavaScript/Class.md)
 * [Object](https://github.com/lyn9503/TIL/blob/main/JavaScript/Object.md)
+* [Array](https://github.com/lyn9503/TIL/tree/main/JavaScript/Array.md)
