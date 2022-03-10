@@ -1,10 +1,16 @@
-# HTTP
+# JSON
+[HTTP](#http)  
+[JSON](#json)  
+[Object to JSON](#1-object-to-json)  
+[JSON to Object](#2-json-to-object)  
+
+## HTTP
 웹 어플리케이션과 같은 클라이언트들이 서버와 통신할 수 있는지를 정의한 것이 HTTP이며,  
 HTTP는 Hypertext transfer Protocol의 약자로써 어떻게 Hypertext를 주고받을 수 있는지를 규약한 Protocol의 하나이다.  
 클라이언트는 서버에 데이터를 request(요청)할 수 있고, 클라이언트가 요청한 것에 따라서 서버는 response(응답)을 클라이언트에 보내주는 방식으로 진행되는 것을 의미한다.  
 Hypertext는 웹사이트에서 이용되어지는 Hyperlink뿐만이 아니라 전반적으로 쓰여지고 있는 리소스(문서, 파일, 이미지)들을 포함한 것 이다.  
 
-# JSON
+## JSON
 JSON은 Javascript Object Notation의 약자로써 자바스크립트의 Object와 관련이 있으며, 자바스크립트에서 사용되는 Object와 동일하게 key와 value로 이루어져 있다.  
 또한 JSON은 브라우저 뿐만 아니라 모바일 에서 서버와 주고받을 때, 또는 서버와 통신을 하지 않아도 오브젝트를 파일 시스템에 저장할 때도 사용하고 있다.  
 
