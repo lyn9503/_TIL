@@ -1,8 +1,8 @@
 # JSON
-[HTTP](#http)  
-[JSON](#json)  
-[Object to JSON](#1-object-to-json)  
-[JSON to Object](#2-json-to-object)  
+[1.HTTP](#http)  
+[2.JSON](#json)  
+[3.Object to JSON](#object-to-json)  
+[4.JSON to Object](#json-to-object)  
 
 ## HTTP
 웹 어플리케이션과 같은 클라이언트들이 서버와 통신할 수 있는지를 정의한 것이 HTTP이며,  
@@ -14,7 +14,7 @@ Hypertext는 웹사이트에서 이용되어지는 Hyperlink뿐만이 아니라 
 JSON은 Javascript Object Notation의 약자로써 자바스크립트의 Object와 관련이 있으며, 자바스크립트에서 사용되는 Object와 동일하게 key와 value로 이루어져 있다.  
 또한 JSON은 브라우저 뿐만 아니라 모바일 에서 서버와 주고받을 때, 또는 서버와 통신을 하지 않아도 오브젝트를 파일 시스템에 저장할 때도 사용하고 있다.  
 
-## 1. Object to JSON
+## Object to JSON
 ### stringify(obj)
 ``stringify(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string;``  
 ``stringify(value: any, replacer?: (number | string)[] | null, space?: string | number): string;``  
@@ -88,7 +88,7 @@ console.log(json);
 
 위처럼 key의 값에 name이 들어오게 되면 ellie라는 value로 무조건 설정하고 key가 name이 아닌경우 원래 value로 출력할 수도 있다.  
 
-## 2. JSON to Object
+## JSON to Object
 ### parse(json)
 parse는 json으로 부터 object를 만드는 API이다.
 ``parse(text: string, reviver?: (this: any, key: string, value: any) => any): any;``
