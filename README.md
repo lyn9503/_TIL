@@ -19,3 +19,4 @@
 * [Object](https://github.com/lyn9503/TIL/blob/main/JavaScript/Object.md)
 * [Array](https://github.com/lyn9503/TIL/tree/main/JavaScript/Array.md)
 * [Array API](https://github.com/lyn9503/TIL/blob/main/JavaScript/Array%20API.md)
+* [JSON](https://github.com/lyn9503/TIL/blob/main/JavaScript/JSON.md)
