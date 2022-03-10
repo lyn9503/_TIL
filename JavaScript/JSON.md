@@ -1,8 +1,8 @@
 # JSON
-[1.HTTP](#http)  
-[2.JSON](#json)  
-[3.Object to JSON](#object-to-json)  
-[4.JSON to Object](#json-to-object)  
+[1. HTTP](#http)  
+[2. JSON](#json)  
+[3. Object to JSON](#object-to-json)  
+[4. JSON to Object](#json-to-object)  
 
 ## HTTP
 웹 어플리케이션과 같은 클라이언트들이 서버와 통신할 수 있는지를 정의한 것이 HTTP이며,  
