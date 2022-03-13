@@ -21,3 +21,4 @@
 * [Array API](https://github.com/lyn9503/TIL/blob/main/JavaScript/Array%20API.md)
 * [JSON](https://github.com/lyn9503/TIL/blob/main/JavaScript/JSON.md)
 * [Callback](https://github.com/lyn9503/TIL/blob/main/JavaScript/Callback.md)
+* [Promise](https://github.com/lyn9503/TIL/blob/main/JavaScript/Promise.md)
