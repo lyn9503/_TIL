@@ -196,3 +196,53 @@ console.log(text.charAt(0));
 ![9](https://user-images.githubusercontent.com/73509513/155652112-bc206f75-4b77-4b8f-9413-313025d6a198.png)
 
 만약 개발자가 number타입으로 바뀐것을 모르고 string으로 착각하고 사용한다면 에러가 발생한다.
+
+## Variable 보충
+
+### primitive 타입
+
+### number, string, boolean, null, undefined
+
+```
+let number = 2;
+let number2 = number;
+console.log(number);
+console.log(number2);
+
+number2 = 3;
+
+console.log(number);
+console.log(number2);
+```
+
+변수를 선언하면 메모리에 공간이 확보된다.  
+number의 데이터를 number2에 복사되어지며, number2에 다시 값을 할당하면 업데이트 되어 메모리에 저장되게 된다.  
+
+### object
+```
+let obj = {
+    name: 'ellie',
+    age: 5,
+};
+console.log(obj.name);
+```
+
+obj라는 object에는 name이 ellie인 변수, age가 5인 변수가 들어가 있다.  
+obj.name은 obj 안에 있는 값이 저장된 name의 주소를 가르킨다.  
+
+```
+let obj2 = obj;
+console.log(obj2.name);
+```
+
+obj2라는 변수에 새로운 메모리 공간이 생기고 obj1의 주소가 복사되어서 그대로 가져온다.  
+
+```
+obj.name = 'james';
+console.log('------');
+console.log(obj.name);
+console.log(obj2.name);
+```
+
+obj1이나 obj2나 가르키고 있는 주소가 같기 때문에 obj의 name을 업데이트하면 obj2도 영향을 받아 값이 변경된다.  
+object들은 크기가 크므로 따로 object들만 따로 모아 할당되어있고, 이것을 가르키는 주소가 있는데 이를 Reference라고 한다.  
