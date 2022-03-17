@@ -1,4 +1,6 @@
-# 함수의 정의와 호출
+#Function 보충 설명
+
+## 함수의 정의와 호출
 ```
 const num1 = 1;
 const num2 = 2;
@@ -15,7 +17,7 @@ console.log(sum);
 위 함수는 add라는 이름을 가진 함수로, num1과 num2를 더해 return하는 기능을 가지고 있다.  
 sum에 3, 4란 값이 입력되면 함수를 호출하고 add의 num1, num2에 값이 저장되고, num1, num2의 더한 값 7을 return한 후 sum에 할당된다.  
 
-# 함수를 다른 변수에 할당
+## 함수를 다른 변수에 할당
 ```
 function add(num1, num2) {
     return num1 + num2;
@@ -42,7 +44,7 @@ print(8, 33);
 print 함수에 아무 인자를 넣지 않고 만든 뒤 함수를 호출할 때 ( )에 인자값을 적어도 출력되지 않는다.  
 그러므로 함수를 만들 때 아무런 인자값을 사용하지(받지) 않으면 Input을 받지 않는다.  
 
-# 함수를 다른 함수에 인자로 할당
+## 함수를 다른 함수에 인자로 할당
 ```
 function surprise(operator) {
     const result = operator(2, 3); // add(2, 3)
