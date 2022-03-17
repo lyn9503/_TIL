@@ -15,6 +15,7 @@
 * [Variable](https://github.com/lyn9503/TIL/blob/main/JavaScript/Variable.md)
 * [Operator](https://github.com/lyn9503/TIL/blob/main/JavaScript/Operator.md)
 * [Function](https://github.com/lyn9503/TIL/blob/main/JavaScript/Function.md)
+* [Function 보충](https://github.com/lyn9503/TIL/blob/main/JavaScript/Function%20%EB%B3%B4%EC%B6%A9.md)
 * [Class](https://github.com/lyn9503/TIL/blob/main/JavaScript/Class.md)
 * [Object](https://github.com/lyn9503/TIL/blob/main/JavaScript/Object.md)
 * [Array](https://github.com/lyn9503/TIL/tree/main/JavaScript/Array.md)
