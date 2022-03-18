@@ -17,6 +17,7 @@
 * [Function](https://github.com/lyn9503/TIL/blob/main/JavaScript/Function_1.md)
 * [Function 2](https://github.com/lyn9503/TIL/blob/main/JavaScript/Function_2.md)
 * [Class](https://github.com/lyn9503/TIL/blob/main/JavaScript/Class.md)
+* [Class 2](https://github.com/lyn9503/TIL/blob/main/JavaScript/Class%202.md)
 * [Object](https://github.com/lyn9503/TIL/blob/main/JavaScript/Object.md)
 * [Array](https://github.com/lyn9503/TIL/tree/main/JavaScript/Array.md)
 * [Array API](https://github.com/lyn9503/TIL/blob/main/JavaScript/Array%20API.md)
