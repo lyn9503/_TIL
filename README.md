@@ -26,3 +26,4 @@
 * [Promise](https://github.com/lyn9503/TIL/blob/main/JavaScript/Promise.md)
 * [async & await](https://github.com/lyn9503/TIL/blob/main/JavaScript/async%20%26%20await.md)
 * [Callback hell](https://github.com/lyn9503/TIL/blob/main/JavaScript/Callback%20hell.md)
+* [Shopping Mall Mini Game](https://github.com/lyn9503/TIL/blob/main/JavaScript/JS%20Mini%20Game.md)
