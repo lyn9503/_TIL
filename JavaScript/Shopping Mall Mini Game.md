@@ -225,3 +225,15 @@
 ![html css](https://user-images.githubusercontent.com/73509513/159412737-9ffc5700-234d-43e4-a291-ec7880ba73cc.PNG)
 
 # JavaScript
+<details>
+<summary>game.js</summary>
+<div markdown="1">
+
+```
+ 
+```
+
+</div>
+</details>
+
+## JS 완성
