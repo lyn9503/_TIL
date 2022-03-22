@@ -192,7 +192,6 @@
     height: 60%;
     list-style: none;
     padding-left: 0;
-    overflow-y: scroll;
   }
   
   .item {
@@ -221,3 +220,8 @@
 ```
 </div>
 </details>
+
+## HTML & CSS 완성
+![html css](https://user-images.githubusercontent.com/73509513/159412737-9ffc5700-234d-43e4-a291-ec7880ba73cc.PNG)
+
+# JavaScript
