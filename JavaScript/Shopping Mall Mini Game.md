@@ -224,7 +224,7 @@ HTML, CSS, JavaScript
 </div>
 </details>
 
-### HTML & CSS 완성
+## HTML & CSS 완성
 ![html css](https://user-images.githubusercontent.com/73509513/159412737-9ffc5700-234d-43e4-a291-ec7880ba73cc.PNG)
 
 ## JavaScript
@@ -239,4 +239,4 @@ HTML, CSS, JavaScript
 </div>
 </details>
 
-### JavaScript 완성
+## JavaScript 완성
