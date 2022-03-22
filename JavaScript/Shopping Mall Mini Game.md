@@ -1,5 +1,5 @@
 # 쇼핑몰 미니 게임 만들기
-HTML, CSS, JavaScript 
+HTML, CSS, JavaScript를 활용해 만들기
 
 ## HTML
 <details>
