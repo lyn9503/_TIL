@@ -1,4 +1,7 @@
-# HTML
+# 쇼핑몰 미니 게임 만들기
+HTML, CSS, JavaScript 
+
+## HTML
 <details>
 <summary>game.html</summary>
 <div markdown="1">
@@ -101,7 +104,7 @@
 </div>
 </details>
 
-# CSS
+## CSS
 <details>
 <summary>game.css</summary>
 <div markdown="1">
@@ -221,10 +224,10 @@
 </div>
 </details>
 
-## HTML & CSS 완성
+### HTML & CSS 완성
 ![html css](https://user-images.githubusercontent.com/73509513/159412737-9ffc5700-234d-43e4-a291-ec7880ba73cc.PNG)
 
-# JavaScript
+## JavaScript
 <details>
 <summary>game.js</summary>
 <div markdown="1">
@@ -236,4 +239,4 @@
 </div>
 </details>
 
-## JS 완성
+### JavaScript 완성
