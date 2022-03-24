@@ -233,7 +233,68 @@ HTML, CSS, JavaScript를 활용해 만들기
 <div markdown="1">
 
 ```
- 
+'use strict'
+
+// Fetch the items from the JSON file
+function loadItems() {
+    return fetch('data/data.json')
+    .then(response => response.json())
+    .then(json => json.items);
+}
+// fetch는 해당하는 경로나, url을 작성하면 간단하게 불러올 수 있다.
+
+// Update the list with the given items
+function displayItems(items) {
+    const container = document.querySelector('.items');
+    container.innerHTML = items.map(item => createHTMLString(item)).join('');
+}
+// items를 html에 표시
+
+// Create HTML list item from the given data item
+function createHTMLString(item) {
+    return `
+        <li class="item">
+            <img src="${item.image}" alt="${item.type}" class="item__thumbnail" />
+            <span class="item__description">${item.gender}, ${item.size}</span>
+        </li>
+    `;
+}
+
+
+function setEventListeners(items) {
+    const logo = document.querySelector('.logo');
+    const buttons = document.querySelector('.buttons');
+    logo.addEventListener('click', () => displayItems(items));
+    buttons.addEventListener('click', event => onButtonClick(event, items));
+}
+
+function onButtonClick(event, items) {
+    const dataset = event.target.dataset;
+    const key = dataset.key;
+    const value = dataset.value;
+
+    if(key == null || value == null) {
+        return;
+    }
+    // key와 value의 값이 없으면 중단
+
+    const filtered = items.filter(item => item[key] === value);
+    displayItems(filtered);
+    // item[key]와 value가 똑같은 것만 골라서 displayItems에 표시
+}
+
+// main
+loadItems()
+    .then(items => {
+        console.log(items);               
+        displayItems(items);
+        setEventListeners(items)
+    })
+.catch(console.log)
+// loadItems()는 data.json에 있는 데이터를 읽어와서 items을 전달, promise로 리턴하도록 작성
+// items를 동적으로 받아와서 promise로 전달, 성공적으로 값을 전달해주면 html에 items를 보여주고,
+// setEventListeners를 이용해서 blue, yellow, pink 버튼을 눌렀을때 필터링 된다.
+
 ```
 
 </div>
