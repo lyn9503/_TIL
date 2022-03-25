@@ -344,3 +344,28 @@ loadItems()
 </details>
 
 ## JavaScript 완성
+
+### T-Shirt
+![1](https://user-images.githubusercontent.com/73509513/160037759-ca111bf1-6dac-4d14-9f15-d600bd6fc5be.PNG)
+
+### Pants
+![2](https://user-images.githubusercontent.com/73509513/160037762-d8a7bf1e-ecb0-4b7a-bc6f-cfc71b77af92.PNG)
+
+### Skirt
+![3](https://user-images.githubusercontent.com/73509513/160037773-0301988c-e647-4b13-8c2e-0fecc40379df.PNG)
+
+### Blue
+![4](https://user-images.githubusercontent.com/73509513/160037777-a61e52a4-559b-4136-9680-87a49beb58e0.PNG)
+
+### Yellow
+![5](https://user-images.githubusercontent.com/73509513/160037784-2fa5485d-607d-4b5b-b717-f844367efcaa.PNG)
+
+### Pink
+![6](https://user-images.githubusercontent.com/73509513/160037792-57afb775-beb9-4dbc-9885-66051431890f.PNG)
+
+## ★
+`document.querySelector`
+css 선택자를 가진 html 요소를 선택해서 가져온다.  
+
+`return fetch()`
+fetch는 해당하는 경로나, url을 작성하면 간단하게 불러올 수 있다.  
