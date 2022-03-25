@@ -227,6 +227,86 @@ HTML, CSS, JavaScript를 활용해 만들기
 ## HTML & CSS 완성
 ![html css](https://user-images.githubusercontent.com/73509513/159412737-9ffc5700-234d-43e4-a291-ec7880ba73cc.PNG)
 
+## json
+<details>
+<summary>data.json</summary>
+<div markdown="1">
+
+```
+{
+    "items": [
+        {
+            "type": "tshirt", 
+            "gender": "male", 
+            "size": "large", 
+            "color": "blue", 
+            "image": "imgs/blue_t.png"
+        },
+        {
+            "type": "skirt", 
+            "gender": "female", 
+            "size": "small", 
+            "color": "blue", 
+            "image": "imgs/blue_s.png"
+        },
+        {
+            "type": "pants", 
+            "gender": "male", 
+            "size": "large", 
+            "color": "blue", 
+            "image": "imgs/blue_p.png"
+        },
+
+        {
+            "type": "tshirt", 
+            "gender": "female", 
+            "size": "small", 
+            "color": "pink", 
+            "image": "imgs/pink_t.png"
+        },
+        {
+            "type": "skirt", 
+            "gender": "female", 
+            "size": "large", 
+            "color": "pink", 
+            "image": "imgs/pink_s.png"
+        },
+        {
+            "type": "pants", 
+            "gender": "male", 
+            "size": "large", 
+            "color": "pink", 
+            "image": "imgs/pink_p.png"
+        },
+
+        {
+            "type": "tshirt", 
+            "gender": "female", 
+            "size": "small", 
+            "color": "yellow", 
+            "image": "imgs/yellow_t.png"
+        },
+        {
+            "type": "skirt", 
+            "gender": "female", 
+            "size": "small", 
+            "color": "yellow", 
+            "image": "imgs/yellow_s.png"
+        },
+        {
+            "type": "pants", 
+            "gender": "male", 
+            "size": "large", 
+            "color": "yellow", 
+            "image": "imgs/yellow_p.png"
+        }
+    ]
+}
+```
+
+</div>
+</details>
+
 ## JavaScript
 <details>
 <summary>game.js</summary>
