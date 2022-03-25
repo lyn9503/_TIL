@@ -53,51 +53,7 @@ HTML, CSS, JavaScript를 활용해 만들기
 
     <!-- Items -->
     <ul class="items">
-        <li class="item">
-          <img src="imgs/blue_t.png" alt="tshirt" class="item__thumbnail">
-          <span class="item__description">male, large</span>
-        </li>
-
-        <li class="item">
-          <img src="imgs/blue_s.png" alt="skirt" class="item__thumbnail">
-          <span class="item__description">female, small</span>
-        </li>
-
-        <li class="item">
-          <img src="imgs/blue_p.png" alt="pants" class="item__thumbnail">
-          <span class="item__description">male, large</span>
-        </li>
-
-        <li class="item">
-          <img src="imgs/pink_t.png" alt="tshirt" class="item__thumbnail">
-          <span class="item__description">female, small</span>
-        </li>
-
-        <li class="item">
-          <img src="imgs/pink_s.png" alt="skirt" class="item__thumbnail">
-          <span class="item__description">female, large</span>
-        </li>
-
-        <li class="item">
-          <img src="imgs/pink_p.png" alt="pants" class="item__thumbnail">
-          <span class="item__description">male, large</span>
-        </li>
-        
-        <li class="item">
-          <img src="imgs/yellow_t.png" alt="tshirt" class="item__thumbnail">
-          <span class="item__description">female, small</span>
-        </li>
-        
-        <li class="item">
-          <img src="imgs/yellow_s.png" alt="skirt" class="item__thumbnail">
-          <span class="item__description">female, small</span>
-        </li>
-        
-        <li class="item">
-          <img src="imgs/yellow_p.png" alt="pants" class="item__thumbnail">
-          <span class="item__description">male, large</span>
-        </li>
-
+        <!-- items는 game.js의 createHTMLString 함수에서 받는다. -->
     </ul>
   </body>
 ```
