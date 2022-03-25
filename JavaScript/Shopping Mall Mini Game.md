@@ -271,22 +271,24 @@ HTML, CSS, JavaScript를 활용해 만들기
 ```
 'use strict'
 
-// Fetch the items from the JSON file
+// JSON 파일에서 items 목록 가져오기
 function loadItems() {
     return fetch('data/data.json')
     .then(response => response.json())
     .then(json => json.items);
 }
 // fetch는 해당하는 경로나, url을 작성하면 간단하게 불러올 수 있다.
+// data.json 호출
 
-// Update the list with the given items
+// items 목록 업데이트
 function displayItems(items) {
     const container = document.querySelector('.items');
     container.innerHTML = items.map(item => createHTMLString(item)).join('');
 }
 // items를 html에 표시
 
-// Create HTML list item from the given data item
+
+// 가져온 items 목록을 html로 만들기
 function createHTMLString(item) {
     return `
         <li class="item">
@@ -296,18 +298,23 @@ function createHTMLString(item) {
     `;
 }
 
-
+// 이벤트 함수 만들기
 function setEventListeners(items) {
     const logo = document.querySelector('.logo');
     const buttons = document.querySelector('.buttons');
+    // document.querySelector: css 선택자를 가진 html 요소를 선택해서 가져온다.
+
     logo.addEventListener('click', () => displayItems(items));
     buttons.addEventListener('click', event => onButtonClick(event, items));
+    // 클릭시 displayItems, onButtonClick 호출
 }
 
+// 버튼을 눌렀을 때 이벤트 발생
 function onButtonClick(event, items) {
     const dataset = event.target.dataset;
     const key = dataset.key;
     const value = dataset.value;
+    // html의 버튼들의 data-key, data-value 받음
 
     if(key == null || value == null) {
         return;
