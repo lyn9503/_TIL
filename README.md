@@ -1,5 +1,3 @@
-# 공부한 내용을 정리해 올려요!
-
 ### HTML
 * [HTML](https://github.com/lyn9503/TIL/blob/main/HTML/HTML.md)
 * [Tag](https://github.com/lyn9503/TIL/blob/main/HTML/Tag.md)  
@@ -27,3 +25,5 @@
 * [async & await](https://github.com/lyn9503/TIL/blob/main/JavaScript/async%20%26%20await.md)
 * [Callback hell](https://github.com/lyn9503/TIL/blob/main/JavaScript/Callback%20hell.md)
 * [Shopping Mall Mini Game](https://github.com/lyn9503/TIL/blob/main/JavaScript/Shopping%20Mall%20Mini%20Game.md)
+### React
+* [Component](https://github.com/lyn9503/TIL/blob/main/React/Component.md)
