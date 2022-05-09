@@ -29,7 +29,8 @@ Component는 UI를 재사용이 가능한 개별적인 여러 조각으로 나�
 이러한 문제점을 해결하기 위해 Component를 이용해 각각 태그를 나누어준다.
 
 # HTML을 Component화
-Component에는 함수와 클래스 두가지로 표현할 수 있다.
+Component에는 함수와 클래스 두가지로 표현할 수 있다.  
+Component를 만들때 그 Component는 하나의 최상위 태그로 시작해야한다. (header, div, ...)
 
 ## 함수
 ```
@@ -37,7 +38,7 @@ function Subject() {
   return <header>
             <h1>WEB</h1>
             world wide web!
-        </header>
+         </header>
   ;
 }
 
@@ -100,3 +101,20 @@ class Content extends Component{
   }
 }
 ```
+# 적용
+```
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Subject></Subject>
+        <TOC></TOC>
+        <Content></Content>
+      </div>
+    );
+  }
+}
+```
+위에서 HTML이 담긴 Class의 이름을 정한 태그를 <>을 이용해 적용시키면 된다.
+
+![6](https://user-images.githubusercontent.com/73509513/167335107-79c870fd-2bd7-425d-9d8a-cf0e8bc5a9c0.PNG)
