@@ -42,6 +42,14 @@ mode가 welcome일때 welcome title, desc를, read일때 contents의 title과 de
   {this.state.subject.sub}
 </header>
 ```
+### mode = read
+
+![read](https://user-images.githubusercontent.com/73509513/167768220-152f11ae-0484-4c70-859c-06b0a3ba34b6.PNG)
+
+### mode = welcome
+
+![welcome](https://user-images.githubusercontent.com/73509513/167768224-af62607c-ba32-423d-b874-1aa909bf587f.PNG)  
+
 WEB의 링크를 클릭했을때 mode가 welcome으로 바뀐다.  
 이때 this.state.mode = 'welcome';를 적게되면 동작하지 않는데 this가 어떤 component를 가르키는지 모르므로,  
 이를 해결하기 위해 함수가 끝난 직후에 bind를 사용해주면 되며, 또한 setState를 사용해야 정상적으로 mode가 welcome으로 변경되게 된다.  
