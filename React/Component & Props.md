@@ -1,7 +1,7 @@
 # Component
 Component는 UI를 재사용이 가능한 개별적인 여러 조각으로 나누는 것이다.
 
-# Component가 없다면?
+## Component가 없다면?
 ```
 <html>
     <body>
@@ -101,7 +101,7 @@ class Content extends Component{
   }
 }
 ```
-# 적용
+## 적용
 ```
 class App extends Component {
   render() {
@@ -118,3 +118,32 @@ class App extends Component {
 위에서 HTML이 담긴 Class의 이름을 정한 태그를 <>을 이용해 적용시키면 된다.
 
 ![6](https://user-images.githubusercontent.com/73509513/167335107-79c870fd-2bd7-425d-9d8a-cf0e8bc5a9c0.PNG)
+
+# Props
+component에 전달 : {this.props.title}  
+component는 언제나 똑같은 내용을 보여주는데 props를 사용해 효율적으로 출력값을 변경할 수 있다.  
+
+# component 분리
+App.js파일에 여러개의 component가 몰려있어 다른 파일에서 접근하기가 힘드므로, 각각의 컴포넌트들로 나누는 것이 좋다.  
+
+## component 파일 생성
+
+''`
+import React, { Component } from 'react';
+''`
+react라는 라이브러리에서 component라고 하는 클래스를 로딩한다.
+
+## 외부에서 component 파일 불러오기
+
+외부에서 component를 사용하기 위해서는
+``
+export default TOC;
+``
+을 작성하면 되며, 불러오려면
+``
+import TOC from "./components/TOC";
+``
+을 작성해주면 된다.  
+
+이렇게 component를 나누어주면 코드가 한층 간결해지고, 필요한 컴포넌트만 import 해주면 되므로 간편하며, App.js가 아닌 다른 js파일에서도 사용할 수 있는 장점이 있다.  
+
