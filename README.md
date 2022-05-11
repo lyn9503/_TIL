@@ -26,4 +26,6 @@
 * [Callback hell](https://github.com/lyn9503/TIL/blob/main/JavaScript/Callback%20hell.md)
 * [Shopping Mall Mini Game](https://github.com/lyn9503/TIL/blob/main/JavaScript/Shopping%20Mall%20Mini%20Game.md)
 ### React
-* [Component](https://github.com/lyn9503/TIL/blob/main/React/Component.md)
+* [Component & Props](https://github.com/lyn9503/TIL/blob/main/React/Component%20&%20Props.md)
+* [State](https://github.com/lyn9503/TIL/blob/main/React/State.md)
+* [Event](https://github.com/lyn9503/TIL/blob/main/React/Event.md)
