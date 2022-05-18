@@ -107,5 +107,118 @@ render(){
 }
 ```
 title과 desc를 읽기위한 Component js파일
+
 # Update
+## UpdateContent.js
+```
+  constructor(props) {
+    super(props);
+    this.state = {
+      id:this.props.data.id,
+      title:this.props.data.title,
+      desc:this.props.data.desc
+    }
+    this.inputFormHandler = this.inputFormHandler.bind(this);
+  }
+  
+  inputFormHandler(e){
+    this.setState({[e.target.name]:e.target.value});
+  }
+
+  render(){
+      return(
+        <article>
+          <h2>Update</h2>
+          <form action="/create_process" method="post"
+            onSubmit={function(e){
+              e.preventDefault();
+              this.props.onSubmit(
+                this.state.id,
+                this.state.title,
+                this.state.desc
+              );
+            }.bind(this)}
+          >
+            <input type="hidden" name="id" value={this.state.id}></input>
+            {/**id는 사용자에게 보일 필요가 없기 때문에 hidden form을 쓴다. */}
+            <p>
+              <input type="text" 
+                     name="title" 
+                     placeholder="title" 
+                     value={this.state.title}
+                     onChange={this.inputFormHandler}>
+                     
+              </input>
+            </p>
+
+            <p>
+              <textarea name="desc" 
+                        placeholder="description"
+                        value={this.state.desc}
+                        onChange={this.inputFormHandler}>
+              </textarea>
+            </p>
+
+            <p>
+              <input type="submit"></input>
+            </p>
+          </form>
+        </article>
+      );
+    }
+  }
+```
+
+## App.js
+```
+  } else if(this.state.mode === 'update'){
+    _content = this.getReadContent();
+    _article = <UpdateContent data={_content} onSubmit={
+      function(_id, _title, _desc){
+        var _contents = Array.from(this.state.contents); // contents 원본을 복사한 새로운 javascript가 만들어진다.
+        var i = 0;
+        while(i < _contents.length){
+          if(_contents[i].id === _id){
+            _contents[i] = {id:_id, title:_title, desc:_desc};
+            break;
+          }
+          i = i + 1;
+        }
+        this.setState({
+          contents: _contents
+        });
+        console.log(_title, _desc);
+      }.bind(this)}></UpdateContent>
+  }
+```
+
 # Delete
+```
+<Control onChangeMode={function(_mode){
+  if(_mode === 'delete') {
+    if(window.confirm('really?')){
+      var _contents = Array.from(this.state.contents);
+      var i = 0;
+      while(i < this.state.contents.length){
+        if(_contents[i].id === this.state.selected_content_id){
+          _contents.splice(i, 1);
+          break;
+        }
+        i = i + 1;
+      }
+      this.setState({
+        mode:'welcome',
+        contents:_contents
+      });
+      alert('delete');
+      }
+      } else {
+          this.setState({
+          mode:_mode
+        });
+      }
+    this.setState({
+      mode:_mode
+    });}.bind(this)}>
+</Control>
+```
