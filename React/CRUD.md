@@ -107,6 +107,21 @@ render(){
 }
 ```
 title과 desc를 읽기위한 Component js파일
+```
+getReadContent(){
+  var i = 0;
+  while(i < this.state.contents.length){
+    var data = this.state.contents[i];
+    if(data.id === this.state.selected_content_id) {
+      return data;
+      break;
+    }
+    i = i + 1;
+    }
+  }
+```
+while을 사용해 contents의 길이만큼 반복하며, 읽어온 contents를 data에 넣어준다.  
+만약 data의 id와 selected_content_id의 id값이 일치할 경우 data를 반환하고 멈춘다.  
 
 # Update
 ## UpdateContent.js
@@ -121,10 +136,14 @@ title과 desc를 읽기위한 Component js파일
     this.inputFormHandler = this.inputFormHandler.bind(this);
   }
   
-  inputFormHandler(e){
-    this.setState({[e.target.name]:e.target.value});
-  }
+inputFormHandler(e){
+  this.setState({[e.target.name]:e.target.value});
+}
+```
+객체를 생성 및 초기화 하기위한 constructor함수를 사용해 id, title, desc의 값과 inputFormHandler함수의 값을 초기화 해준다.  
+inputFormHandler함수는 title, desc의 값의 state를 변경해주는 함수이다.  
 
+```
   render(){
       return(
         <article>
@@ -168,6 +187,8 @@ title과 desc를 읽기위한 Component js파일
     }
   }
 ```
+content를 업데이트 하기 위해서는 id의 값이 필요한데 이는 사용자에게 보여질 필요가 없으므로 hidden을 사용해 숨겨준다.  
+input과 textarea의 내용은 inputFormHandler 함수를 통해 state를 변경하게 된다.  
 
 ## App.js
 ```
@@ -191,6 +212,10 @@ title과 desc를 읽기위한 Component js파일
       }.bind(this)}></UpdateContent>
   }
 ```
+mode의 state가 update일 경우 `_content` 는 getReadContent()함수를 호출해 contents의 값을 입력받는다.  
+`_article`은 UpdateContent.js의 onSubmit 함수의 값을 전달 받고 id와 title, desc의 값을 Array를 통해 원본을 복사한다.  
+while을 통해 contents의 길이만큼 반복하게 되며, contents의 id값과 `_id`의 값이 일치하다면 `_contents`의 [i]번째에 전달받은 값을 넣고 멈춘다.  
+그 후 setState를 통해 contents에 `_contents`의 값을 넣게되면 그 contents는 값이 변경되게 된다.  
 
 # Delete
 ```
@@ -222,3 +247,7 @@ title과 desc를 읽기위한 Component js파일
     });}.bind(this)}>
 </Control>
 ```
+`_mode`가 delete일 경우 정말로 삭제할 것인지를 묻기위해 window.confirm을 사용해서 사용자에게 창을 띄워준다.  
+`_contents`는 contents의 값을 복사하며, while을 사용해 contents의 i번째 id 값과 selected_content_id의 id 값이 일치하면  
+splice를 통해 삭제한 후 멈추게된다.  
+이후 setState에서 mode와 contents의 state를 welcome으로 변경한 뒤 맞는 contents를 보여주게 되고, alert을 통해 삭제가 되었다고 사용자에게 알려준다.  
