@@ -109,3 +109,79 @@ Switch는 경로가 일치하는 첫번째 component가 발견되면 나머지�
   <App />
 </BrowserRouter>
 ```
+## useParams
+```
+var contents = [
+  {id:1, title:'HTML', description:'HTML is ...'},
+  {id:2, title:'JS', description:'JS is ...'},
+  {id:3, title:'React', description:'React is ...'},
+]
+
+function Topic(){
+  var params = useParams();
+  var topic_id = params.topic_id;
+  var selected_topic = {
+      title:'Sorry',
+      description:'Not Found'    
+  }
+  for(var i=0; i<contents.length; i++){
+      if(contents[i].id === Number(topic_id)){
+          selected_topic = contents[i];
+          break;
+      }
+  }
+  return (
+      <div>
+          <h3>{selected_topic.title}</h3>
+          {selected_topic.description}
+      </div>
+  );
+}
+
+function Topics(){
+  var lis = [];
+  for(var i=0; i<contents.length; i++){
+      lis.push(
+      <li key={contents[i].id}>
+        <Link to={'/topics/'+ contents[i].id}>
+          {contents[i].title}
+        </Link>
+      </li>)
+  }
+
+  return (
+      <div>
+          <h2>Topics</h2>
+          <ul>
+              {lis}
+          </ul>
+          <Routes>
+            <Route exact path="/topics/:topic_id" element={<Topic />} />
+          </Routes>
+      </div>
+  )
+}
+```
+React에서 Router사용시 Parameter를 사용하고 싶을때 useParams를 사용한다.  
+위 코드에서는 Topic에서 parameter를 지정해주며, lis라는 배열을 생성해 Topics의 content, description을 출력해주고, 각각의 contents도 출력한다.
+
+## React-Router-Dom V6
+```
+<Router>
+  <div>
+    <h1>Hello Router</h1>
+     <ul>
+       <li><Link to="/">Home</Link></li>
+       <li><Link to="/topics">Topics</Link></li>
+       <li><Link to="/contact">Contact</Link></li>
+     </ul>
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route path='/topics/*' element={<Topics />}></Route>
+      <Route path="/contact" element={<Contact />}></Route>
+    </Routes>
+  </div>
+</Router>
+```
+이전 버전에서는 Switch와 Route만 사용해주고 뒤에 component를 넣으면 됐지만,  
+V6 버전부터는 최상위 태그 위에 Router로 감싸주어야 하며, Route사용시 element를 사용해서 component를 연결해주어야 한다.
