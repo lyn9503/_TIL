@@ -185,3 +185,21 @@ React에서 Router사용시 Parameter를 사용하고 싶을때 useParams를 사
 ```
 이전 버전에서는 Switch와 Route만 사용해주고 뒤에 component를 넣으면 됐지만,  
 V6 버전부터는 최상위 태그 위에 Router로 감싸주어야 하며, Route사용시 element를 사용해서 component를 연결해주어야 한다.
+
+## Home
+![1](https://user-images.githubusercontent.com/73509513/170853253-87dd658a-c87e-4013-bbcd-8a4abc4ccf0f.PNG)
+
+## Topics
+![2](https://user-images.githubusercontent.com/73509513/170853210-61ffa107-c29c-4054-94b3-3e970977b2b8.PNG)
+
+## Contact
+![3](https://user-images.githubusercontent.com/73509513/170853212-50abbf10-d929-4142-af70-bee5ff5d5753.PNG)
+
+## Topics/HTML
+![4](https://user-images.githubusercontent.com/73509513/170853213-f5a77232-035d-4c35-98b3-2c25e61f9697.PNG)
+
+## Topics/JS
+![5](https://user-images.githubusercontent.com/73509513/170853214-c545155e-823c-40a4-a326-d2a3955f12bc.PNG)
+
+## Topics/React
+![6](https://user-images.githubusercontent.com/73509513/170853215-39d34f10-1ad9-4496-8243-6f15c826f40a.PNG)
