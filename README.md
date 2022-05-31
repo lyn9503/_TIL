@@ -31,4 +31,5 @@
 * [Event](https://github.com/lyn9503/TIL/blob/main/React/Event.md)
 * [CRUD](https://github.com/lyn9503/TIL/blob/main/React/CRUD.md)
 * [React Router](https://github.com/lyn9503/TIL/blob/main/React/React%20Router.md)
+* [Ajax](https://github.com/lyn9503/TIL/blob/main/React/Ajax.md)
 * [Proxy](https://github.com/lyn9503/TIL/blob/main/React/Proxy.md)
