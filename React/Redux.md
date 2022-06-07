@@ -24,6 +24,7 @@ class  App extends Component {
 }
 ```
 AddNumberRoot와 DisplayNumberRoot을 처리하는 js파일  
+
 AddNumberRoot에서 전달된 size의 값을 setState를 통해 state의 number가 업데이트 된다.  
 이후 DisplayNumberRoot의 number의 값의 state를 업데이트 해준다.
 
