@@ -244,4 +244,137 @@ input에 표시되는 값(number)는 store의 state를 가르키게 변경한다
 ```
 AddNumberRoot와 동일  
 
-## React Component에서 Redux 종속성 기능 제거(Container Component 도입)
+# React Component에서 Redux 종속성 기능 제거(Container Component 도입)
+
+## Components/AddNumberRoot & DisplayNumberRoot
+
+## Components/DisplayNumberRoot.jsx
+```
+import React, {Component} from 'react';
+import DisplayNumber from '../Containers/DisplayNumber';
+
+export default class DisplayNumberRoot extends Component {
+  render() {
+    return(
+      <div>
+        <h1>Display Number Root (DisplayNumberRoot.jsx)</h1>
+        <DisplayNumber></DisplayNumber>
+      </div> 
+    )
+  }
+}
+```
+
+## ## Components/AddNumberRoot.jsx
+```
+import React, {Component} from 'react';
+import AddNumber from '../Containers/AddNumber';
+
+export default class AddNumberRoot extends Component{
+  render(){
+    return (
+      <div>
+        <h1>Add Number Root (AddNumberRoot.jsx)</h1>
+        <AddNumber></AddNumber>
+      </div>
+    )
+  }
+}
+```
+AddNumber를 감싸기 위해 Components에서 Containers로 변경해준다.
+
+## Components/AddNumber.jsx
+```
+import React, {Component} from 'react';
+
+export default class AddNumber extends Component {
+    state = {size:1}
+    render() {
+      return(
+        <div>
+          <h1>Add Number (AddNumber.jsx)</h1>
+
+          <input type="button" value="+" onClick={function(){
+              this.props.onClick(this.state.size);
+              //store.dispatch({type:'INCREMENT', size:this.state.size})
+          }.bind(this)}></input>
+
+          <input type="text" value={this.state.size} onChange={function(e){
+              this.setState({size:Number(e.target.value)});
+          }.bind(this)}></input>
+        </div> 
+      )
+    }
+}
+```
+이전 코드는 부품으로써 가치가 있다. onClick 메소드가 있는한 어디서든지 사용이 가능하기 때문이다.  
+redux로 변경한 코드는 애플리케이션의 상태에 의존하기 때문에 재사용이 불가능해졌다.  
+이를 해결하기 위해선 redux에 종속된 기능을 제거하면 된다.  
+AddNumber의 Component를 감싸는 Component를 만들고 그 새로운 Component는 redux의 store를 핸들링하는 Component로 만들고  
+AddNumber Component는 redux를 모르는 Component로 만들면 된다.  
+
+## Components/DisplayNumber.jsx
+```
+import React, { Component } from 'react';
+
+export default class DisplayNumber extends Component {
+  /*state = {number:store.getState().number}
+
+  constructor(props){
+    super(props);
+    store.subscribe(function(){
+      this.setState({number:store.getState().number});
+    }.bind(this))
+  }*/
+
+    render() {
+      return(
+        <div>
+          <h1>Display Number (DisplayNumber.jsx)</h1>
+          <input type="text" value={this.props.number} readOnly></input>
+        </div> 
+      )
+    }
+}
+```
+constructor를 Containers의 DisPlayNumber.jsx에 옮긴다.  
+DisplayNumber는 render의 value값이 redux에 종속되어 있다.  
+
+## Containers/AddNumber.jsx
+```
+import Addnumber from "../Components/AddNumber";
+import React, { Component } from "react";
+import store from '../store';
+
+export default class extends Component {
+    render(){
+        return <Addnumber onClick={function(size){
+            store.dispatch({type:'INCREMENT', size:size})
+        }.bind(this)}></Addnumber>
+    }
+}
+```
+AddNumber를 감싸는 Containers Component  
+Containers component를 만들어서 redux와 상호작용하게 만든다.  
+이전의 AddNumber component는 다시 재사용될 수 있게 되돌렸다  
+
+## Containers/DisPlayNumber.jsx
+```
+import DisplayNumber from '../components/DisplayNumber';
+import React, { Component } from 'react';
+import store from "../store";
+
+export default class extends Component{
+    state = {number:store.getState().number}
+    constructor(props){
+        super(props);
+        store.subscribe(function(){
+            this.setState({number:store.getState().number});
+        }.bind(this));
+    }
+    render(){
+        return <DisplayNumber number={this.state.number}></DisplayNumber>
+    }
+} 
+```
+Components의 DisplayNumber.jsx에 존재하는 constructor를 가져오고, DisplayNumber를 사용하기 위해 props 값인 number를 주입시켜준다.  
