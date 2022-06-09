@@ -1,6 +1,6 @@
 # Redux
 
-## 1. Redux란?
+# 1. Redux란?
 React에서 State를 더 효율적으로 관리하는 라이브러리이며, Redux는 State의 관리를 Component 외부에서 처리하는 것이다.
 Redux를 사용하게 되면 store라는 내부에 State를 담게 된다.
 
