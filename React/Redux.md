@@ -378,3 +378,119 @@ export default class extends Component{
 } 
 ```
 Components의 DisplayNumber.jsx에 존재하는 constructor를 가져오고, DisplayNumber를 사용하기 위해 props 값인 number를 주입시켜준다.  
+
+# Redux Connect & Provider
+
+## index.js
+```
+import {Provider} from 'react-redux';
+import store from './store'
+...
+root.render(
+
+<Provider store={store}>
+  <App />
+</Provider>
+)
+```
+component를 생성할 때 마다 store를 가져오는건 매우 귀찮은 일이므로 Redux가 제공하는 Component인 Provider를 사용해 App을 감싸준다.  
+Provider는 무조건 props를 받아야 하는데 이 props는 store로 한다.  
+이렇게 되면 Provider component를 통해 각 하위 component로 store를 공급해준다.  
+
+## connect - mapStateTOprops()
+
+```
+import DisplayNumber from '../Components/DisplayNumber';
+import {connect} from 'react-redux';
+
+function mapReduxStateTOReactprops(state){
+    return {
+        number:state.number
+    }
+}
+
+export default connect(mapReduxStateTOReactprops) (DisplayNumber);
+```
+
+connect 메소드는 connect를 실행하면 return값이 함수고, 그 return된 함수를 다시 실행해서 export하는데  
+이는 아래의 수동으로 했던 랩핑 component와 똑같은 값을 리턴한다.  
+
+
+connect는 2개의 인자 `mapStateTOprops()`, `mapDispatchToProps()` 가 들어와야 한다.  
+
+```
+function mapReduxStateTOReactprops(state){
+    return {
+        number:state.number
+    }
+}
+```
+
+위 함수가 호출될 때 redux의 state 값을 인자로 받도록 약속되어 있다.  
+
+위 코드와 같이 작성하게 되면  
+```
+state = {number:store.getState().number}
+
+store.subscribe(function(){
+            this.setState({number:store.getState().number});
+        }.bind(this));
+
+number={this.state.number}
+```
+이전에 작성했던 코드와 같아지게 된다.  
+
+mapStateTOprops(), mapDispatchToProps() 두 인자는 원하는 이름으로 변경해도 된다.  
+mapStateTOprops()는 redux의 State를 React의 props로 맵핑해주며,  
+mapDispatchToProps()는 Redux의 Dispatch를 React의 Props로 연결해준다 라고 이해하면 된다.  
+
+아래의 이전 코드에서 number라는 props는 state값이 store의 subscribe를 통해 state의 값을 number로 주면  
+그 state의 number값이 바뀔때마다 setState에서 render가 실행되면서 number의 값이 변경된다.  
+이 작업을 수월하게 해주는 것이 mapStateTOprops()이다.  
+
+```
+import React, { Component } from 'react';
+import store from "../store";
+
+export default class extends Component{
+    state = {number:store.getState().number}
+    constructor(props){
+        super(props);
+        store.subscribe(function(){
+            this.setState({number:store.getState().number});
+        }.bind(this));
+    }
+    render(){
+        return <DisplayNumber number={this.state.number} unit={this.props.unit}></DisplayNumber>
+    }
+} 
+```
+
+## connect - mapDispatchToProps()
+```
+import AddNumber from "../Components/AddNumber";
+import {connect} from 'react-redux';
+
+function mapDispatchToProps(dispatch){
+    return {
+        onClick:function(size){
+            dispatch({type:'INCREMENT', size:size});
+        }
+    }
+}
+export default connect(null, mapDispatchToProps)(AddNumber);
+```
+mapDispatchToProps()는 Redux의 dispatch를 React의 component에 props로 연결시켜주는 정보를 담고있는 함수를 작성하면된다.
+
+아래 주석처리된 코드에서 onClick은 전달해야할 props 값이므로 mapDispatchToProps의 return에 작성해주면 되며,  
+mapDispatchToProps()가 호출될 때 dispatch을 인자로 받으면 store대신 dispatch을 사용한다.
+
+```
+export default class extends Component {
+    render(){
+        return <Addnumber onClick={function(size){
+            store.dispatch({type:'INCREMENT', size:size})
+        }.bind(this)}></Addnumber>
+    }
+}
+```
