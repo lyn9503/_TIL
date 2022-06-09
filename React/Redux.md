@@ -1,9 +1,10 @@
 # Redux
-## Redux란?
+
+## 1. Redux란?
 React에서 State를 더 효율적으로 관리하는 라이브러리이며, Redux는 State의 관리를 Component 외부에서 처리하는 것이다.
 Redux를 사용하게 되면 store라는 내부에 State를 담게 된다.
 
-## Redux 용어
+## 1.1 Redux 용어
 
 ### Action
 State의 변화를 일으킬 때 참조하는 객체이며, Event와 같다.  
@@ -24,7 +25,7 @@ Store의 값이 필요한 Component는 Store를 Subscribe(구독)한다.
 Component에서 Store를 구독하는 작업은 후에 Redux의 connect 함수가 대신 한다.  
 Redux의 내장 함수를 사용하여 subscribe, unsubscribe 함수를 사용하여 구독 및 구독 취소를 할 수 있다.  
 
-# React만 작성
+# 2. React만 작성
 
 ## App.js
 ```
@@ -52,7 +53,8 @@ AddNumberRoot와 DisplayNumberRoot을 처리하는 js파일
 AddNumberRoot에서 전달된 size의 값을 setState를 통해 state의 number가 업데이트 된다.  
 이후 DisplayNumberRoot의 number의 값의 state를 업데이트 해준다.
 
-## Components
+## 2.1 Components
+
 ### AddNumber.jsx
 ```
 export default class AddNumber extends Component {
@@ -126,7 +128,7 @@ DisplayNumberRoot에서 받은 number 값을 표시해준다. 값은 건들 수 
 ![5](https://user-images.githubusercontent.com/73509513/172285675-80988daf-1237-4d4b-a249-e51b7a589c06.PNG)
 
 
-# Redux 도입
+# 3. Redux 도입
 ## store.js
 ```
 import {createStore} from 'redux';
@@ -244,7 +246,7 @@ input에 표시되는 값(number)는 store의 state를 가르키게 변경한다
 ```
 AddNumberRoot와 동일  
 
-# React Component에서 Redux 종속성 기능 제거(Container Component 도입)
+# 4. React Component에서 Redux 종속성 기능 제거(Container Component 도입)
 
 ## Components/AddNumberRoot & DisplayNumberRoot
 
@@ -265,7 +267,7 @@ export default class DisplayNumberRoot extends Component {
 }
 ```
 
-## ## Components/AddNumberRoot.jsx
+## Components/AddNumberRoot.jsx
 ```
 import React, {Component} from 'react';
 import AddNumber from '../Containers/AddNumber';
@@ -379,7 +381,7 @@ export default class extends Component{
 ```
 Components의 DisplayNumber.jsx에 존재하는 constructor를 가져오고, DisplayNumber를 사용하기 위해 props 값인 number를 주입시켜준다.  
 
-# Redux Connect & Provider
+# 5. Redux Connect & Provider
 
 ## index.js
 ```
